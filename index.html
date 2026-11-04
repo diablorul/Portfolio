@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F0F1FA" />
+  <meta name="description" content="The product and visual design portfolio of Dmitry Dovgal." />
+  <title>Dmitry Dovgal — Product & Visual Designer</title>
+  <script>
+    (() => {
+      const cameFromCase = /\/case\.html(?:$|[?#])/i.test(document.referrer);
+      const explicitlySkipped = new URLSearchParams(window.location.search).has('skipPreloader');
+      if (cameFromCase || explicitlySkipped) document.documentElement.classList.add('skip-site-preloader');
+    })();
+  </script>
+  <style>html.skip-site-preloader #site-preloader{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./features.css" />
+  <link rel="stylesheet" href="./home-refresh.css" />
+  <link rel="stylesheet" href="./motion.css?v=single-stroke-01" />
+  <link rel="stylesheet" href="./cursor.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" defer></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" defer></script>
+  <script src="./benday-logo.js?v=1" defer></script>
+  <script src="./preloader.js?v=skip-case-02" defer></script>
+  <script src="./app.js?v=phrase-accent-02" defer></script>
+  <script src="./portfolio-features.js" defer></script>
+  <script src="./motion.js?v=single-stroke-01" defer></script>
+  <script src="./cursor.js" defer></script>
+</head>
+<body>
+  <div class="site-preloader" id="site-preloader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="preloader-panels" aria-hidden="true">
+      <span class="preloader-panel preloader-panel--top-left"></span>
+      <span class="preloader-panel preloader-panel--top-right"></span>
+      <span class="preloader-panel preloader-panel--bottom-left"></span>
+      <span class="preloader-panel preloader-panel--bottom-right"></span>
+    </div>
+    <div class="preloader-content" aria-hidden="true">
+      <span class="preloader-logo-wrap">
+        <svg class="preloader-ring" viewBox="0 0 288 288" aria-hidden="true"><circle class="preloader-ring-track" cx="144" cy="144" r="126" /><circle class="preloader-ring-progress" id="preloader-ring-progress" cx="144" cy="144" r="126" /><circle class="preloader-ring-track preloader-ring-track--inner" cx="144" cy="144" r="102" /><circle class="preloader-ring-progress preloader-ring-progress--inner" id="preloader-ring-progress-inner" cx="144" cy="144" r="102" /></svg>
+        <img class="preloader-logo" src="./assets/de-pedrini-logo.svg" alt="" />
+      </span>
+      <span class="preloader-percent" id="preloader-percent">0%</span>
+    </div>
+  </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Dmitry Dovgal — home"><span class="brand-mark-shell"><img class="brand-mark" src="./assets/de-pedrini-logo.svg" alt="" /><span class="brand-mark-animation" data-benday-logo></span></span><span class="brand-name">Dmitry Dovgal</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about-dialog" data-open-about>Info</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="motion-track-stage">
+    <svg class="scroll-thread" aria-hidden="true" focusable="false" viewBox="0 0 1920 1974" preserveAspectRatio="xMinYMin meet" overflow="visible"><defs><mask id="scrollThreadReveal" x="-64" y="-64" width="2048" height="2102" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse"><rect x="-64" y="-64" width="2048" height="2102" fill="black" /><path class="scroll-thread-mask-path" d="M -13.805 7.693 C 182.6685 57.0639 376.777 149.373 529.738 255.727 C 682.699 374.225 794.513 493.342 820.9405 607.542 C 846.72 664.71 842.86 722.156 811.5 774.386 C 714 861 589 882 502.3865 861.246 C 458.805 850.8 424.421 829.882 406.95 801.975 C 389.48 774.07 388.925 739.169 406.22 696.514 C 442.637 653.486 481.2265 612.642 535.6855 589.484 C 590.144 566.327 660.472 560.856 753.5845 584.3245 C 1035.5 668.64 1164.58 759.52 1229.885 853.1815 C 1295.185 946.848 1296.71 1043.305 1248.5 1117.89 C 1199.375 1193.89 1148.435 1241.48 1098.45 1272.47 C 1048.475 1303.465 999.45 1317.855 954.166 1327.45 C 931.5235 1332.245 909.8155 1335.845 889.388 1339.72 C 868.961 1343.59 849.815 1347.74 832.2965 1353.645 C 797.26 1365.45 768.736 1384.265 749.5 1421.89 C 685.21 1547.64 674.085 1734.135 834.783 1850.635 C 915.1315 1920.89 1038.435 1949.635 1219.53 1956.54 C 1400.62 1963.82 1639.5 1936.51 1951 1859.39" fill="none" stroke="white" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" /></mask><linearGradient id="scrollTrackGradient" x1="724.832" y1="246.886" x2="724.832" y2="2165.29" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3239F1" /><stop offset="1" stop-color="#595FEB" /></linearGradient></defs><path class="scroll-thread-art" mask="url(#scrollThreadReveal)" /></svg>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="availability reveal" data-delay="180"><span class="availability-dot"></span>Open to offers</div>
+      <div class="hero-copy">
+        <h1 class="hero-title reveal" id="hero-title">
+          <span>The <strong><span class="phrase-piece" id="phrase-leading">Product</span> <span class="phrase-piece" id="phrase-amp">&amp;</span></strong></span>
+          <span><strong class="phrase-piece" id="phrase-following">Visual Design</strong> <em>Portfolio</em></span>
+          <span>of Dmitry Dovgal</span>
+        </h1>
+        <p class="hero-description reveal" data-delay="110">Hello, I’m Dmitry. I design digital products that balance user needs, business goals, and scalable experiences.</p>
+      </div>
+      <div class="hero-meta reveal" data-delay="320">
+        <div class="social-links">
+          <a href="https://www.behance.net/dmitry_dovgal" target="_blank" rel="noreferrer">Behance <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/dmitry-dovgal-58674675/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          <a href="./cv-dmitry-dovgal.pdf" target="_blank" rel="noreferrer">Check CV <span>↗</span></a>
+        </div>
+        <span class="local-time">UA <span id="local-time">15:40</span></span>
+      </div>
+    </section>
+
+    <section class="intro-section" aria-labelledby="intro-title">
+      <h2 class="intro-title reveal" id="intro-title"><span>Good design isn’t just</span><span>about how things look.</span><span>It’s about how they work.</span></h2>
+      <div class="intro-detail-row">
+        <div class="intro-visual reveal" aria-hidden="true"><canvas class="motion-silk-canvas"></canvas></div>
+        <div class="intro-copy reveal" data-delay="120">
+          <p>I create thoughtful digital products and visual experiences that balance user needs, business objectives and aesthetics</p>
+          <dl class="intro-stats">
+            <div><dt>Years of experience</dt><dd>10+</dd></div>
+            <div><dt>Core expertise</dt><dd>UI/UX</dd></div>
+            <div><dt>Product focus</dt><dd>Digital, Web3</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-label="Featured work">
+      <h2 class="work-title reveal">Featured work</h2>
+      <div class="project-grid project-grid--figma">
+        <a class="project project-beexpay reveal" href="./case.html?project=beexpay" aria-label="BeeXPay App — Crypto banking" data-project="beexpay">
+          <div class="project-visual"><img src="./assets/cases/beexpay-01.png?v=2" alt="BeeXPay crypto banking app preview" fetchpriority="high" /><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="case-card-caption"><div class="project-tags">CRYPTO BANKING <i>•</i> PRODUCT DESIGN <i>•</i> WEB3 <i>•</i> 3D <i>•</i> ANIMATION</div><h2><span class="project-title-arrow" aria-hidden="true">↗</span><span class="project-title-window"><span class="project-title-roll"><span>BeeXPay App</span><span aria-hidden="true">BeeXPay App</span></span></span></h2></div>
+        </a>
+        <a class="project project-superearn reveal" href="./case.html?project=superearn" aria-label="SuperEarn App — Non-custodial multichain portal to decentralized finance" data-project="superearn">
+          <div class="project-visual project-visual--super"><img src="./assets/cases/superearn-04.png" alt="Yellow SuperEarn lightning mascot" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="case-card-caption"><div class="project-tags">APP <i>•</i> PRODUCT DESIGN <i>•</i> WEB3 <i>•</i> NON-CUSTODIAL</div><h2><span class="project-title-arrow" aria-hidden="true">↗</span><span class="project-title-window"><span class="project-title-roll"><span>SuperEarn App</span><span aria-hidden="true">SuperEarn App</span></span></span></h2></div>
+        </a>
+        <a class="project project-deepden reveal" href="./case.html?project=deepden" aria-label="DeepDen — AI concept design" data-project="deepden">
+          <div class="project-visual"><img src="./assets/cases/deepden-home.png" alt="A futuristic neon-lit city apartment interior" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="case-card-caption"><div class="project-tags">WEB <i>•</i> CONCEPT <i>•</i> DESIGN <i>•</i> 18+ <i>•</i> AI</div><h2><span class="project-title-arrow" aria-hidden="true">↗</span><span class="project-title-window"><span class="project-title-roll"><span>DeepDen</span><span aria-hidden="true">DeepDen</span></span></span></h2></div>
+        </a>
+        <a class="project project-crocobit reveal" href="./case.html?project=crocobit" aria-label="CrocoBit — Crypto-trading GameFi platform" data-project="crocobit">
+          <div class="project-visual"><img src="./assets/cases/crocobit-home-preview.png" alt="CrocoBit crypto trading GameFi characters" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="case-card-caption"><div class="project-tags">WEB <i>•</i> DESIGN <i>•</i> CRYPTO <i>•</i> ILLUSTRATION</div><h2><span class="project-title-arrow" aria-hidden="true">↗</span><span class="project-title-window"><span class="project-title-roll"><span>CrocoBit</span><span aria-hidden="true">CrocoBit</span></span></span></h2></div>
+        </a>
+        <a class="project project-niradex reveal" href="./case.html?project=eva-dex" aria-label="NiraDex — Web3 platform" data-project="eva-dex">
+          <div class="project-visual"><img src="./assets/cases/niradex-home.png" alt="NiraDex trading platform dashboard" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="case-card-caption"><div class="project-tags">SAAS <i>•</i> DESIGN <i>•</i> WEB3 <i>•</i> 3D <i>•</i> ANIMATION</div><h2><span class="project-title-arrow" aria-hidden="true">↗</span><span class="project-title-window"><span class="project-title-roll"><span>NiraDex</span><span aria-hidden="true">NiraDex</span></span></span></h2></div>
+        </a>
+        <a class="project project-artbot reveal" href="./case.html?project=artbot" aria-label="ArtBot — AI LegalTech platform" data-project="artbot">
+          <div class="project-visual"><img src="./assets/cases/artbot-01.png?v=2" alt="ArtBot AI chat interface on a smartphone" loading="lazy" /><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="case-card-caption"><div class="project-tags">WEB <i>•</i> CONCEPT <i>•</i> DESIGN <i>•</i> AI <i>•</i> BRANDING</div><h2><span class="project-title-arrow" aria-hidden="true">↗</span><span class="project-title-window"><span class="project-title-roll"><span>ArtBot</span><span aria-hidden="true">ArtBot</span></span></span></h2></div>
+        </a>
+      </div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <p class="contact-eyebrow">CONTACT</p>
+        <h2 id="contact-title">Get in<br />touch</h2>
+        <p>Have a project in mind? Let’s create something meaningful together.</p>
+      </div>
+      <nav class="contact-links" aria-label="Contact links">
+        <a href="https://t.me/dmitry_dovgal28" target="_blank" rel="noreferrer"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.4 18.4 20c-.2 1.1-.8 1.4-1.7.9l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 9-8.1c.4-.4-.1-.6-.6-.2L6.3 14.1l-4.7-1.5c-1-.3-1-1 .2-1.5L20.1 3c.9-.3 1.7.2 1.5 1.4Z"/></svg><span>Telegram</span><strong>@dmitry_dovgal28</strong><i aria-hidden="true">↗</i></a>
+        <a href="https://www.behance.net/dmitry_dovgal" target="_blank" rel="noreferrer"><svg class="contact-icon contact-icon--brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h8a4 4 0 0 1 2.7 7A4.2 4.2 0 0 1 11 19H3V5Zm3 2.5v3.2h4.3c1.1 0 1.8-.6 1.8-1.6s-.7-1.6-1.8-1.6H6Zm0 5.6v3.4h4.8c1.2 0 2-.6 2-1.7s-.8-1.7-2-1.7H6ZM16 6h5v1.8h-5V6Zm5.5 8.6h-5.7c.1 1.6.9 2.4 2.3 2.4.9 0 1.7-.4 1.9-1.1h1.4c-.4 2.1-1.8 3.2-4 3.2-2.7 0-4.3-1.8-4.3-4.7s1.7-4.8 4.3-4.8 4.1 1.8 4.1 4.6v.4Zm-5.7-1.4h4c-.1-1.2-.8-1.9-1.9-1.9-1.2 0-1.9.7-2.1 1.9Z"/></svg><span>Behance</span><strong>dmitry_dovgal</strong><i aria-hidden="true">↗</i></a>
+        <a href="https://www.linkedin.com/in/dmitry-dovgal-58674675/" target="_blank" rel="noreferrer"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.3a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM3.5 9.8h3.4v10.7H3.5V9.8Zm5.5 0h3.2v1.5h.1a3.5 3.5 0 0 1 3.2-1.8c3.4 0 4 2.2 4 5v6h-3.4v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8v5.4H9V9.8Z"/></svg><span>LinkedIn</span><strong>Dmitry Dovgal</strong><i aria-hidden="true">↗</i></a>
+        <a href="mailto:dmitriy.dovgal28@gmail.com"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18A1.5 1.5 0 0 1 22.5 7v10a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 17V7A1.5 1.5 0 0 1 3 5.5Zm9 7.1 8.3-5.6H3.7l8.3 5.6Zm0 2.2L3 9v8h18V9l-9 5.8Z"/></svg><span>Email</span><strong>dmitriy.dovgal28@gmail.com</strong><i aria-hidden="true">↗</i></a>
+      </nav>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>© <span id="copyright-year">2026</span> Dmitry Dovgal</span>
+    <div><a href="https://t.me/dmitry_dovgal28" target="_blank" rel="noreferrer">Telegram ↗</a><a href="mailto:dmitriy.dovgal28@gmail.com">Email</a><a href="https://www.behance.net/dmitry_dovgal" target="_blank" rel="noreferrer">Behance ↗</a><a href="https://www.linkedin.com/in/dmitry-dovgal-58674675/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+  </footer>
+  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+    <button class="dialog-close" type="button" aria-label="Close About">×</button>
+    <p class="eyebrow">A LITTLE ABOUT ME</p>
+    <h2 id="about-title">Dmitry Dovgal</h2>
+    <p>I’m a web designer who understands problems and enjoys solving them. I like making things aesthetic and constructive, while keeping them convenient and effective.</p>
+    <div class="about-section"><h3>Experience</h3><p><strong>2018–2019</strong> · Graphic &amp; Web Designer<br />Promo Group Company, remote</p><p><strong>2014–2018</strong> · Graphic &amp; Web Designer<br />Freelance</p></div>
+    <div class="about-section"><h3>Education</h3><p><strong>2007–2012</strong> · Kryvyi Rih National University<br />Automation Control System Specialist</p></div>
+    <div class="about-specialties"><span>Photoshop</span><span>Illustrator</span><span>Adobe Muse</span><span>Premiere</span><span>Figma</span><span>After Effects</span></div>
+    <div class="about-actions"><a href="mailto:dmitriy.dovgal28@gmail.com">dmitriy.dovgal28@gmail.com ↗</a><a href="https://t.me/dmitry_dovgal28" target="_blank" rel="noreferrer">Telegram @dmitry_dovgal28 ↗</a><a href="./cv-dmitry-dovgal.pdf" target="_blank" rel="noreferrer">Download CV ↓</a></div>
+    <div class="about-socials"><a href="https://www.behance.net/dmitry_dovgal" target="_blank" rel="noreferrer">Behance ↗</a><a href="https://www.linkedin.com/in/dmitry-dovgal-58674675/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+  </dialog>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

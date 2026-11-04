@@ -1,0 +1,16 @@
+/* Motion-only layer for the homepage. It leaves the existing layout geometry intact. */
+.motion-track-stage{position:relative;isolation:isolate}
+.hero{position:relative;z-index:1;background:transparent}
+.intro-section,.work{position:relative;z-index:1}
+.scroll-thread{position:absolute;z-index:0;top:0;left:0;width:100%;height:auto;aspect-ratio:1920/1974;overflow:visible;pointer-events:none;visibility:hidden}
+.scroll-thread.is-ready{visibility:visible}
+.scroll-thread-image{display:block;width:100%;height:100%}
+.scroll-thread-mask-path{stroke-dasharray:1;stroke-dashoffset:1;stroke-width:32}
+.scroll-thread-art{fill:none;stroke:url(#scrollTrackGradient);stroke-width:32;stroke-linecap:round;stroke-linejoin:round}
+.intro-title,.intro-detail-row,.work-title,.project-grid--figma{position:relative;z-index:1}
+.intro-title span:first-child{will-change:transform}
+.intro-visual{position:relative;overflow:hidden;background:#050B19}
+.motion-silk-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;background:radial-gradient(ellipse at 30% 35%,#142C50 0%,#09152B 42%,#050B19 82%)}
+.project-visual.motion-ready{isolation:isolate}
+.motion-managed .project-visual,.motion-managed .project-tags,.motion-managed .case-card-caption h2{will-change:transform,opacity}
+@media(prefers-reduced-motion:reduce){.scroll-thread{display:none}.motion-silk-canvas{animation:none}}

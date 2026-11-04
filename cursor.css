@@ -1,0 +1,43 @@
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"] { cursor: none !important; }
+
+  .site-cursor {
+    --cursor-size: 18px;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1.5px solid #fff;
+    border-radius: 999px;
+    background: #fff;
+    color: #fff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(-100px,-100px,0) translate(-50%,-50%) scale(.72);
+    transition: width .34s cubic-bezier(.22,1,.36,1), height .34s cubic-bezier(.22,1,.36,1), opacity .2s ease, transform .34s cubic-bezier(.22,1,.36,1), border-radius .34s cubic-bezier(.22,1,.36,1);
+    will-change: transform,width,height;
+  }
+  .site-cursor.is-visible { opacity: 1; transform: translate3d(var(--cursor-x, -100px),var(--cursor-y, -100px),0) translate(-50%,-50%) scale(1); }
+  .site-cursor.is-interactive { --cursor-size: 48px; }
+  .site-cursor.is-project { --cursor-size: 82px; }
+  .site-cursor-label {
+    font: 500 10px/1 "DM Sans",sans-serif;
+    letter-spacing: -.02em;
+    opacity: 0;
+    transform: scale(.8);
+    transition: opacity .2s ease .04s, transform .3s cubic-bezier(.22,1,.36,1);
+    white-space: nowrap;
+  }
+  .site-cursor.is-project .site-cursor-label { opacity: 1; transform: scale(1); }
+  .site-cursor.is-pressed { transform: translate3d(var(--cursor-x, -100px),var(--cursor-y, -100px),0) translate(-50%,-50%) scale(.88); }
+}
